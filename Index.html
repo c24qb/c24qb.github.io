@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#sentence 
+		{font-size:50px;
+			font-family: arial;               
+		}
+
+	#ball{
+width:25px;
+height:25px;
+border-radius:50%;
+position: relative;
+right: 200px;
+background-image:url('https://graphicriver.img.customer.envatousercontent.com/files/287014345/Soccer-197-prw.jpg?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=f8f0cc4d21adeb6c20fcefd8754fa696;')
+
+	}
+
+	#goal{
+width:600px; 
+height:225px;
+border:10px solid white;
+
+	}
+	body{
+background-color:green;
+
+
+
+	}
+#left{
+
+
+
+}
+
+.clickers{
+width:49.5%;
+height:100%;
+position:relative;
+margin:0px;
+display:inline-block;
+background-image:url('https://images.assetsdelivery.com/compings_v2/toodtuphoto/toodtuphoto1807/toodtuphoto180700013.jpg');
+
+}
+
+	</style>
+</head>
+<body>
+<p id="sentence1"></p>
+
+<div id="goal"> 
+<div id="ball">
+<div id="left" class="clickers"></div>
+<div id="right" class="clickers"></div>
+
+<!-- 1. Create a new div with the id of ball 2. Create a variable that points to it 3. Make sure in it’s styling that it has Position: absolute Style also should have z-index: 2; 4. In javascript the way you set a style is by saying variable.style.left = ____ + “px”; -->
+</div>
+
+<script type="text/javascript">
+var L = document.getElementById("left");
+var R = document.getElementById("right");
+
+
+
+
+L.addEventListener("click", 
+
+function(event){console.log(event.clientX, event.clientY )}
+	
+	)
+
+
+</script>
+
+
+</body>
+</html>
