@@ -1,80 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<style type="text/css">
-		#sentence 
-		{font-size:50px;
-			font-family: arial;               
-		}
-
-	#ball{
-width:25px;
-height:25px;
-border-radius:50%;
-position: relative;
-right: 200px;
-background-image:url('https://graphicriver.img.customer.envatousercontent.com/files/287014345/Soccer-197-prw.jpg?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=f8f0cc4d21adeb6c20fcefd8754fa696;')
-
-	}
-
-	#goal{
-width:600px; 
-height:225px;
-border:10px solid white;
-
-	}
-	body{
-background-color:green;
-
-
-
-	}
-#left{
-
-
+    <title></title>
+    <style type="text/css">
+   
+body{
+    background-image: url('snowbird.png');
+    background-size:cover;
+   background-image: ;
 
 }
 
-.clickers{
-width:49.5%;
-height:100%;
-position:relative;
-margin:0px;
-display:inline-block;
-background-image:url('https://images.assetsdelivery.com/compings_v2/toodtuphoto/toodtuphoto1807/toodtuphoto180700013.jpg');
+    td{
+        text-align: center;
+        font-size:50px;
+       
+        transition: 1s;
+        border: 0px solid black;
+        position:relative;
+        margin: 10px;
+        border-radius:20px;
+       
+        /*background-color:rgba(62, 80, 109, 0.5);*/
+    }
 
-}
+    td a{
+         color: white ;
 
-	</style>
+
+    }
+
+     td:hover a{
+         color:rgb(61, 61, 61);
+
+
+    }
+
+    td:hover {
+        background-color:rgba(172, 177, 189, 0.5);
+        
+
+   
+        transition: 1s;
+
+    }
+
+    #menu {position:absolute;
+         top: 160px ;
+        background-color:rgba(62, 80, 109, 0.5);
+        border-radius:20px;
+        width: 100%;
+        height: 200px;
+        /*background-color: white;*/
+
+
+    }
+
+
+
+    a{
+    	text-decoration: none;
+    }
+    </style>
 </head>
+
 <body>
-<p id="sentence1"></p>
+<br><br><br>
+    <table id="menu">
+        <tr>
+            <td><a href="about.html"><div>About</div></td></a>
+            <td><a href="projects.html"><div>Projects</div></td></a>
+            <td><a href="journal.html"><div>Journal</div></td></a>
+        </tr>
 
-<div id="goal"> 
-<div id="ball">
-<div id="left" class="clickers"></div>
-<div id="right" class="clickers"></div>
-
-<!-- 1. Create a new div with the id of ball 2. Create a variable that points to it 3. Make sure in it’s styling that it has Position: absolute Style also should have z-index: 2; 4. In javascript the way you set a style is by saying variable.style.left = ____ + “px”; -->
-</div>
-
-<script type="text/javascript">
-var L = document.getElementById("left");
-var R = document.getElementById("right");
-
-
-
-
-L.addEventListener("click", 
-
-function(event){console.log(event.clientX, event.clientY )}
-	
-	)
-
-
-</script>
-
-
+       
+    </table>
 </body>
+
 </html>
