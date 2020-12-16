@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+<style type="text/css">
+	
+
+	#words{
+		width: 300px;
+		height:200px;
+		background-color:transparent;
+		position:sticky;
+		top: 300px;
+		left: 400px;
+		z-index: 2;
+		font-size: 20px;
+		color:white;
+
+	}	
+	#random{
+		background-size:cover;
+		background-repeat:no-repeat;
+		cursor:none;
+		width: 1000px;
+		height: 800px;
+		position:sticky;
+		background-position:center;
+		z-index: 1;
+		
+
+	}
+
+
+		
+
+</style>
+
+</head>
+<body>
+
+<div id= "words">
+<p>
+	Happy Thanksgiving! I love You!
+
+</p>
+</div>	
+<div id= "random">
+	
+</div>
+
+
+	<script type="text/javascript">
+
+
+
+
+var array = [
+
+"url('1.jpg')",
+"url('2.jpg')",
+"url('3.jpg')",
+"url('4.jpg')",
+"url('5.jpg')",
+"url('7.jpg')",
+"url('8.jpg')",
+"url('9.jpg')",
+"url('10.jpg')"
+
+];
+
+var random = document.getElementById("random");
+
+		document.addEventListener("click",
+			function(){
+				var randomNumber = 
+				Math.round(Math.random()*9);
+
+random.style.backgroundImage=array[randomNumber];
+
+			console.log(randomNumber);
+
+			})
+		
+
+		
+			
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	
+	body{
+		background-size:cover;
+		background-repeat:no-repeat;
+		cursor:none;
+	}
+	#skier{
+		position: absolute;
+		background-size: cover;
+		content:url(skier.png);
+   width:50px;
+   height:50px;
+   position:absolute;
+   background-repeat: no-repeat;
+		
+	}
+		
+</style>
+</head>
+<body>
+<div id="skier">
+</div>
+	<script type="text/javascript">
+var array = [
+"url(https://www.skiutah.com/members/alta/trailmaps/picturewithconversions/trailmap)",
+"url(https://www.jacksonhole.com/images/maps/2056-WinterTrailMap.FINAL2019.201.jpg)",
+"url(https://www.skiresort.info/typo3temp/assets/_processed_/9a/a1/1a/a8/5708cf5965.jpg)"
+];
+var skier = document.getElementById("skier");
+		document.addEventListener("click",
+			function(){
+				var randomNumber =
+				Math.round(Math.random()*2);
+			document.body.style.backgroundImage=array[randomNumber];
+			console.log(randomNumber);
+			});
+		
+		document.addEventListener("mousemove",
+			function(event){
+				skier.style.left= event.clientX-25+'px';
+				skier.style.top= event.clientY-25+'px';
+			}
+			)
+	</script>
+</body>
+</html>
