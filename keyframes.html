@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#background{
+			background-image: url('SB.jpg');
+			background-repeat: no-repeat;
+			position:absolute;
+			background-size:cover;
+			width:1275px;
+			height:720px;
+			z-index:-5;
+			top:0px;
+			left:0px;
+		}
+
+
+		#mineral_basin_express_lift{
+	
+			width:60px;
+			height:80px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			animation-name: skilift;
+			animation-duration: 30s;
+			animation-iteration-count: infinite;
+
+		}
+
+		#mineral_basin_lift2{
+	
+			width:60px;
+			height:80px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			animation-name: skiliftII;
+			animation-duration: 20s;
+			animation-iteration-count: infinite;
+
+		}
+		#snowbird_tram{
+	
+			width:60px;
+			height:80px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			animation-name: tram;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+		}
+
+			#skier1{
+	
+			width:60px;
+			height:80px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			animation-name: skierI;
+			animation-duration: 30s;
+			animation-iteration-count: infinite;
+
+		}
+
+			/*#skier2{
+	
+			width:60px;
+			height:80px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			animation-name: skierI;
+			animation-duration: 30s;
+			animation-iteration-count: infinite;
+		}*/
+
+		@keyframes skilift{
+		0% {background-image: url(lift.png);left: 543px;
+top: 630px;}
+		50% {background-image: url(lift.png);left: 543px;
+top: 165px;}
+		100% {background-image: url(lift.png);left: 543px;
+top: 630px;}
+
+
+		}
+
+		@keyframes skiliftII{
+		0% {background-image: url(lift.png);left: 570px;
+top: 510px;}
+		50% {background-image: url(lift.png);left: 1040px;
+top: 160px;}
+		100% {background-image: url(lift.png);left: 570px;
+top: 510px;}
+
+}
+@keyframes tram{
+		0% {background-image: url(tram.png);left: 695px;
+top: 67px;}
+		50% {background-image: url(tram.png);left: 595px;
+top: 10px;}
+		100% {background-image: url(tram.png);left: 695px;
+top: 67px;}
+
+}
+@keyframes skierI{
+
+		0%{background-image: url(keyframesskier1.png);left: 535px;
+top: 400px;}
+		
+		50%{background-image: url(keyframesskier1.png);left: 543px;
+top: -65px;}
+
+		56.25%{background-image: url(keyframesskier1.png);left: 543px;
+top: -65px;}
+
+		62.5%{background-image: url(keyframesskier1.png);left: 415px;
+top: -50px;}
+
+		68.75%{background-image: url(keyframesskier1.png);left: 440px;
+top: 25px;}
+		
+		75%{background-image: url(keyframesskier1.png);left: 490px;
+top: 100px;}
+
+		81.25%{background-image: url(keyframesskier1.png);left: 460px;
+top: 215px;}
+		
+		87.5%{background-image: url(keyframesskier1.png);left: 450px;
+top: 265px;}
+		
+		91.75%{background-image: url(keyframesskier1.png);left: 470px;
+top: 315px;}
+
+		95%{background-image: url(keyframesskier1.png);left: 520px;
+top: 350px;}
+
+		100%{background-image: url(keyframesskier1.png);left: 535px;
+top: 400px;}
+
+
+
+		
+
+
+
+
+
+
+
+
+
+}
+
+	</style>
+</head>
+<body>
+	<div id= mineral_basin_express_lift></div>
+	<div id= mineral_basin_lift2></div>
+	<div id= snowbird_tram></div>
+	<div id=skier1></div>
+	<div id=skier2></div>
+	<div id=background></div>
+
+
+</body>
+</html>

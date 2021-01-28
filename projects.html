@@ -1,48 +1,226 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+
 	<title></title>
 
 	<style type="text/css">
 		
-
-	#codesketches{
-		width:400px;
-		height:500px;
-		background-color:white;
-		opacity:1;
-		left:300px;
-		margin-left:auto;
-		margin-right:auto;
-		color:black;
-		text-align: center;
-		font-size:30px;
-
+#bigdiv{
+        width:100%;
+        background-color:white;
+        height:100%;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;
+        z-index:-1;
+        position:absolute;
+        top:0px;
+        
 
 
+    }
+	.dropbtn {
+  background-color: #ae98aa;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  position:relative;
+  left:50vh;
+  top:35vh;
+  width:500px;
+  height:200px;
+  position:center;
+  font-size:50px;
+  font-family: 'Dosis', sans-serif;
+  border-radius:50px;
 
-	}
-		
-		body{
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  width:500px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    left:50vh;
+    top:35vh;
+    font-family: 'Dosis', sans-serif;
+    border-radius:50px;
+
+
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius:50px;
+}
+
+.dropdown-content a:hover {background-color: #779ecb;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: lightblue;}
+
+		/*body{
 
 			background-image: url('aspen.jpg');
-		}
+			height:100vh;
+			width:100vh;
+			background-size:cover;
+			background-repeat:no-repeat;
 
+		}*/
+
+	   #menu {
+
+        position:absolute;
+        background-color:rgba(62, 80, 109, 0.5);
+        border-radius:20px;
+        width: 100%;
+        height: 200px;
+        z-index: 4;
+        top:0%;
+        font-family: 'Dosis', sans-serif;
+
+
+    }
+        #mountains{
+    width:100%;
+    height:40vh;
+    top:72vh;
+    left:0px;
+    background-image:url("mountainrangeblack.png");
+    z-index:0;
+    background-repeat:no-repeat;
+    background-size:contain; 
+    position:absolute;
+    animation-name: clearo;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+
+
+}
+
+@keyframes clearo{
+        20% {background-image: url(mountainrangeblack.png);}
+        50%{background-image: url("mountainrangenavy.png");}
+        80% {background-image: url(mountainrangepurple.png);}
+        100%  {background-image: url(mountainrangeblack.png);}
+
+
+        }
+td{
+        text-align: center;
+        font-size:50px;
+        transition: 1s;
+        border: 0px solid black;
+        position:relative;
+        margin: 10px;
+        border-radius:20px;
+
+       
+    }
+
+    td a{
+         color: white ;
+
+
+    }
+
+     td:hover a{
+         color:rgb(61, 61, 61);
+
+
+    }
+
+    td:hover {
+        background-color:rgba(172, 177, 189, 0.5);
+        
+
+   
+        transition: 1s;
+
+    }
 
 	</style>
 </head>
-<body>
 
-<div id="codesketches">
-	Codesketches
-	<tr>
-            <td><a href="random2.html"><div>codesketch number 1</div></td></a>
-            Move your mouse to control the skier and click to experience different mountains.
-            <td><a href="card.html"><div>codesketch number 2</div></td></a>
-            <td><a href="codesketch1.html"><div>codesketch number 3</div></td></a>
+<body>
+<div id="bigdiv"></div>
+<div id="mountains"></div> 
+
+
+
+
+    <table id="menu">
+        <tr>
+            <td><a href="about.html"><div>About</div></td></a>
+            <td><a href="projects.html"><div>Projects</div></td></a>
+            <td><a href="journal.html"><div>Journal</div></td></a>
+            <td><a href="index.html"><div>Home</div></td></a>
         </tr>
 
-</div>
+       
+    </table>
+<body>
+<div class="dropdown">
+  <button class="dropbtn">Codesketches</button>
+  <div class="dropdown-content">
+    <a href="random2.html">Move skier and Click</a>
+    <a href="card.html">Card</a>
+    <a href="codesketch1.html">Shoot some soccer balls by clicking</a>
+    <a href="keyframes.html">Animation</a>
 
+  </div>
+</div>
+<script type="text/javascript">
+	   
+     var bigdiv = document.getElementById('bigdiv');
+
+       bigdiv.addEventListener('click', function(){
+         
+
+
+bigdiv.style.backgroundColor = 'rgb('+ Math.round(Math.random() * 255)+ "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ')';
+
+         
+
+
+            });
+
+var menu = document.getElementById('menu');
+
+       menu.addEventListener('click', function(){
+         
+
+
+bigdiv.style.backgroundColor = 'rgb('+ Math.round(Math.random() * 255)+ "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ')';
+
+    });
+
+var moutains = document.getElementById('mountains');
+
+       moutains.addEventListener('click', function(){
+         
+
+
+bigdiv.style.backgroundColor = 'rgb('+ Math.round(Math.random() * 255)+ "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ')';
+
+    });
+  
+</script>
 </body>
 </html>

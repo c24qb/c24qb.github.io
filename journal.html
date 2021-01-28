@@ -1,32 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 	<title></title>
 
 	<style type="text/css">
 	
-	#white_box{
-		width:800px;
-		height:3000px;
-		background-color:white;
-		margin-left:auto;
-		margin-right:auto;
-		color:black;
-		text-align: center;
-		font-size:25px;
+	#bigdiv{
+        width:100%;
+        background-color:white;
+        height:200%;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;
+        z-index:-1;
+        position:absolute;
+        top:0px;
+        
+
+
+    }
+    a{
+    	text-decoration:none;
+    }
+	#writing{
+		 font-family: 'Dosis', sans-serif;
+		 position:relative;
+		 top:30vh;
+		 font-size:18px;
+		 text-decoration:none;
+
 	}
-		body{
 
-			background-image: url('Jackson.png');
-		}
+		
+ td{
+        text-align: center;
+        font-size:50px;
+       
+        transition: 1s;
+        border: 0px solid black;
+        position:relative;
+        margin: 10px;
+        border-radius:20px;
 
+       
+    }
+
+
+    td a{
+         color: white ;
+
+
+    }
+
+     td:hover a{
+         color:rgb(61, 61, 61);
+
+
+    }
+
+    td:hover {
+        background-color:rgba(172, 177, 189, 0.5);
+        
+
+   
+        transition: 1s;
+
+    }
+    #menu {
+
+        position:absolute;
+        background-color:rgba(62, 80, 109, 0.5);
+        border-radius:20px;
+        width: 100%;
+        height: 200px;
+        z-index: 4;
+        top:0%;
+        font-family: 'Dosis', sans-serif;
+
+
+    }
 
 	</style>
 </head>
 <body>
 
 
-<div id="white_box">
+
+
+
+
+
+    <table id="menu">
+        <tr>
+            <td><a href="about.html"><div><u>About</u></div></td></a>
+            <td><a href="projects.html"><div><u>Projects</u></div></td></a>
+            <td><a href="journal.html"><div><u>Journal</u></div></td></a>
+            <td><a href="index.html"><div><u>Home</u></div></td></a>
+<u>
+        </tr>
+
+       
+    </table>
+
+<div id="bigdiv"></div>
+<div id="mountains"></div> 
+<div id="writing">
 	Reflection of first few weeks
 	<br/> 
 So far I’ve enjoyed computer science and learning about all the elements of code that play key roles in the functioning of a website. It is really interesting yet frustrating at the same time to see that if you make one simple mistake such as forgetting a comma or quotation mark that your entire code can fall apart. I’ve learned that unlike humans, computers are very precise and need everything to fit perfectly for things to run smoothly. Sofar in CS1 I’ve created a person card which transitions from a picture of an animated skier, to a GIF of someone actually skiing. To me this is amusing and fascinating, but also a part of who I am as skiing is one of my favorite activities. I’ve also begun to make a codesketch about one of my other passions, soccer. Wherever you click on the soccer goal is where the ball will wind up going. In the future I might add a goalkeeper to make things a little more interesting but for now I am trying to perfect what I already have. For me, one of the most annoying components of learning to code is how one is bottlenecked by terminology. What I mean by this is that computers might understand a specific coding language but for humans, if you don’t know the exact punctuation and phrasing, then everything looks like a jumble of numbers and letters. Despite the fact that this is extremely frustrating, it is also rewarding to be able to Google something and then implement it into your own code. Something that was unexpected for me was that we only meet once a week which in my opinion is not enough. I completely understand that we are supposed to be learning on our own in addition to in class and that there simply might not be enough time to have two classes in a week but it would have been nice. For these reasons I am going to see if setting up a weekly lab would even be possible. In these labs we would work on codesketches and maybe some new terminology. Overall, I think CS1 one is going well considering the circumstances and I look forward to the rest of the year. 
@@ -50,10 +130,48 @@ Today we learned how to make a div move without the use of a function which is p
 
 
 12/17/20<br/>
-
-
-
 </div>
+	
+
+
+
 
 </body>
+<script type="text/javascript">
+	    
+     var bigdiv = document.getElementById('bigdiv');
+
+       bigdiv.addEventListener('click', function(){
+         
+
+
+bigdiv.style.backgroundColor = 'rgb('+ Math.round(Math.random() * 255)+ "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ')';
+
+         
+
+
+            });
+
+var menu = document.getElementById('menu');
+
+       menu.addEventListener('click', function(){
+         
+
+
+bigdiv.style.backgroundColor = 'rgb('+ Math.round(Math.random() * 255)+ "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ')';
+
+    });
+
+var writing = document.getElementById('writing');
+
+       writing.addEventListener('click', function(){
+         
+
+
+bigdiv.style.backgroundColor = 'rgb('+ Math.round(Math.random() * 255)+ "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ')';
+
+    });
+
+
+</script>
 </html>
