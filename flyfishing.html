@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+
+	<title>	
+	</title>
+	<style type="text/css">
+		body{
+ margin: 0;
+ cursor: none;
+		}
+		#alpsee{
+			background-image:url('alpsee.jpg');
+			width:185vh;
+			height:100vh;
+			background-size:cover;
+			z-index:1;
+			position:absolute;
+		}
+		#fade{
+	    width:width 300px;
+  	  	height:100px;
+  	  	top:30vh;
+  	  	font-size:50px;
+  	 	background-color:none;
+    	z-index:1;
+   		opacity:0%;
+   		background-size:contain; 
+   		position:absolute;
+   		margin:10px;
+   		color:white;
+    	animation-name: fadeone;
+   		animation-duration: 20s;
+   	 	animation-iteration-count:1;
+    	font-family: 'Dosis', sans-serif;
+
+}
+		#flyrod{
+			background-image:url('flyrodbent.png');
+			width:300px;
+			height:600px;
+			background-size:contain;
+			z-index:3;
+			position:absolute;
+   			background-repeat: no-repeat;
+
+
+
+
+		}
+			#trout1{
+			opacity:0;
+			width:130px;
+			height:60px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			background-image:url('trout1.png');
+			animation-name: troutonemove;
+			animation-duration: 15s;
+			animation-iteration-count: infinite;
+			z-index:3;
+
+			
+
+		}
+			#bucket{
+				width:100px;
+				height:150px;
+				background-image:url("bucket.png");
+				z-index:5;
+				position:absolute;
+				background-size:contain;
+				background-repeat: no-repeat;
+
+
+			}
+	
+		
+
+			@keyframes troutonemove{
+		0% {background-image: url(trout1.png);left: 570px;
+top: 500px;}
+		
+		20% {background-image: url(trout1.png);left: 800px;
+top: 400px;}
+
+		40% {background-image: url(trout1.png);left: 300px;
+top: 350px;}
+
+		60% {background-image: url(trout1.png);left: 50px;
+top: 600px;}
+
+		80% {background-image: url(trout1.png);left: 1000px;
+top: 600px;}
+
+		100% {background-image: url(trout1.png);left: 570px;
+top: 500px;}
+
+	
+
+
+
+
+}
+	@keyframes fadeone{
+    0%{opacity:100%;}
+    100%{opacity:0%;}
+        }	
+		
+
+	</style>
+
+</head>
+<body>
+
+   <div id=alpsee>
+        <div id=flyrod></div>
+        <div id=trout1></div>
+        <div id=trout2></div>
+        <div id=bucket></div>
+    </div>
+<div id=fade>Move your rod until your fly is hovering over a fish, then click on the fish to catch it. Once you have caught the fish, click on the bucket to place your fish into the bucket. Your bucket can hold up to two fish. Have fun! </div>
+
+
+
+	<script type="text/javascript">
+	var flyfishingrod = document.getElementById("flyrod");
+    var trout1 = document.getElementById("trout1");
+    document.addEventListener("mousemove",
+        function(event) {
+            flyfishingrod.style.left = event.clientX - 25 + 'px';
+            flyfishingrod.style.top = event.clientY - 285 + 'px';
+        }
+    )
+    var fishshow = document.getElementById("trout1");
+    trout1.addEventListener("mouseenter",
+    	function(){
+    		fishshow.style.opacity = "1";
+    	}
+    	)
+    trout1.addEventListener("mouseleave",
+    	function(){
+    		fishshow.style.opacity = "0";
+    	}
+    	)
+    var fishcatch = document.getElementById("trout1");
+    var fishcatch1 = document.getElementById("flyrod");
+    var bucket = document.getElementById("bucket");
+	let nofish = true; 
+	let thing = true; 
+
+
+	
+function catchfish(){
+    	if(nofish == true){
+    		fishcatch.addEventListener("click",
+    			function(){
+    				fishcatch.style.opacity = "0"
+    				fishcatch1.style.backgroundImage = "url(fishy.png)"
+					nofish = false;
+    	})}
+
+
+		 else{
+    		fishcatch.addEventListener("click",
+    			function(){
+    				console.log("you already have a fish");
+    	})};
+   }
+
+
+function placebucket(){
+
+    	if(nofish == false && thing == true){
+
+    		bucket.addEventListener("click",
+    			function(){
+    			fishcatch1.style.backgroundImage = "url(flyrodbent.png)"
+    			bucket.style.backgroundImage = "url(rb1.png)"
+    			thing = false;
+
+    	})} 
+		if(nofish == false && thing == false){
+
+    		bucket.addEventListener("click",
+    			function(){
+    			fishcatch1.style.backgroundImage = "url(flyrodbent.png)"
+    			bucket.style.backgroundImage = "url(rb2.png)"
+    			thing = false;
+    			})} 
+    		
+    		else{
+    		bucket.addEventListener("click",
+    			function(){
+    		console.log("no fish");
+    	})}
+
+  }
+document.addEventListener("mousemove", 
+	catchfish);
+document.addEventListener("mousemove", 
+	placebucket);
+
+
+
+	</script>
+</body>
+</html>
