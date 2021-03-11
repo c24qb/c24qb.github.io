@@ -76,6 +76,16 @@
         top:100px;
     }
 
+    #writing {
+        position:absolute;
+        color:black;
+        font-family: 'Dosis', sans-serif;
+        font-size:30px;
+        top:200px;
+
+
+    }
+
 
  td{
         text-align: center;
@@ -117,7 +127,15 @@
 <div id="snow"></div>
 <div id="bigdiv"></div>
 <div id="mountains"></div>
-<div id='writing'></div> 
+<div id='writing'>
+    <br>
+    Hi, welcome to my website! I'm Quentin Balboni! I'm in 9th grade and this is my first year coding html. <br/>
+       The website you are currently browsing was created for my Computer Science 1 class.
+       <br>
+       My email address is c24qb@dalton.org.
+       <br/>
+
+</div> 
 
 
 
@@ -139,6 +157,18 @@
         var bigdiv = document.getElementById('bigdiv');
 
        bigdiv.addEventListener('click', function(){
+         
+
+
+bigdiv.style.backgroundColor = 'rgb('+ Math.round(Math.random() * 255)+ "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ')';
+
+         
+
+
+            });
+       var bigdiv = document.getElementById('bigdiv');
+
+       writing.addEventListener('click', function(){
          
 
 
